@@ -1,0 +1,64 @@
+public class Rectangle {
+	
+	private double width= 0.0;
+	private double height= 0.0;
+	private int ID = 0;
+	int instanceCounter = 0;
+	static int count = 0 ;
+	
+	
+	public int getCount(){
+		return count;
+	}
+	
+	public int getID(){
+		return ID;
+	}
+	
+	 public Rectangle(double width, double height, int rectangleID) {
+	        this.width = width;
+	        this.height = height;
+	        this.ID= rectangleID;
+	        instanceCounter = count;
+	        count++;
+	    }
+	
+	public void setWidth(double w) {
+	      width = w;
+	}
+	
+	public void setHeight(double h) {
+		height = h;
+	}
+	
+	public double getWidth(){
+		return width;
+	}
+	
+	public double getHeight(){
+		return height;
+	}
+	
+	public double getArea() {
+        return width * height;
+    }
+	
+	public double getPerimeter() {
+		return width + width + height + height;
+	}
+	
+	
+
+	public String toString(Rectangle x){
+		String s = "Information about this rectangle:";
+				s += "This is a rectangle";
+				s += "Height is " + x.getHeight();
+				s += "Width is " + x.getWidth(); 
+		return s;
+	}
+	
+	static Rectangle r = new Rectangle(5,10,0);
+	public static void main(String[] args) {
+		System.out.println(r.toString());
+	}
+	}
